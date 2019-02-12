@@ -7,34 +7,13 @@
 \usepackage[landscape]{geometry}
 \usepackage{hyperref}
 
-% To make this come out properly in landscape mode, do one of the following
-% 1.
-%  pdflatex latexsheet.tex
-%
-% 2.
-%  latex latexsheet.tex
-%  dvips -P pdf  -t landscape latexsheet.dvi
-%  ps2pdf latexsheet.ps
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
-
-% If you're reading this, be prepared for confusion.  Making this was
-% a learning experience for me, and it shows.  Much of the placement
-% was hacked in; if you make it better, let me know...
-
-
-% 2008-04
-% Changed page margin code to use the geometry package. Also added code for
-% conditional page margins, depending on paper size. Thanks to Uwe Ziegenhagen
-% for the suggestions.
-
-% 2006-08
-% Made changes based on suggestions from Gene Cooperman. <gene at ccs.neu.edu>
-
-
-% To Do:
-% \listoffigures \listoftables
-% \setcounter{secnumdepth}{0}
-
+\usepackage[yyyymmdd,hhmmss]{datetime}
+\usepackage{fancyhdr}
+\rhead{Compiled on \today\ at \currenttime}
+\lhead{\textbf{Linux Command Line Cheat Sheet}}
 
 % This sets page margins to .5 inch if using letter paper, and to 1cm
 % if using A4 paper. (This probably isn't strictly necessary.)
@@ -47,8 +26,8 @@
 	}
 
 % Turn off header and footer
-\pagestyle{empty}
- 
+%\pagestyle{empty}
+\pagestyle{fancy} 
 
 % Redefine section commands to use less space
 \makeatletter
@@ -95,10 +74,10 @@
 \setlength{\multicolsep}{1pt}
 \setlength{\columnsep}{2pt}
 
-\begin{center}
-     %\Large{\textbf{\LaTeXe\ Cheat Sheet}} \\
-     \Large{\textbf{Linux Command Line} Cheat Sheet} \\
-\end{center}
+%\begin{center}
+%     %\Large{\textbf{\LaTeXe\ Cheat Sheet}} \\
+%     \Large{\textbf{Linux Command Line} Cheat Sheet} \\
+%\end{center}
 
 \section{System Information}
 \subsection{General}
@@ -148,7 +127,7 @@
 \texttt{cp -r source\_dir destination} & Copy source recursively to destination \\
 \texttt{mv file1 file2} & Move file1 to file2 \\
 \texttt{ln -s /path/to/file linkname} & Create a symbolic link to linkname \\
-\texttt{touch file\_name} & Creates and empty file or updates the access/modification info  \\
+\texttt{touch file\_name} & Creates and empty file or updates the access info  \\
 \texttt{cat file} & See the contents of a file \\
 \texttt{less file} & Scroll through the file \\
 \texttt{head file} & Display the first 10 lines \\
@@ -157,33 +136,96 @@
 \end{tabular}
 
 \section{File Permissions}
+\includegraphics[width=0.15\textwidth]{./images/perm1.png} \\
+Type indicates the file type. The most common values are: \\ 
 \begin{tabular}{@{}ll@{}}
-\texttt{} & \\
+ - & file \\
+ d & directory \\
+ l & symbolic link
+\end{tabular}
+\\
+Groups are collections of users. You can view the groups you belong too as follows: \\
+\begin{tabular}{@{}ll@{}}
+ \texttt{id} & Displays the user and group ids of the current user \\
+ \texttt{groups} & Displays the groups of the current user
+\end{tabular}
+Others or World permissions apply to any user on the system. \\
+Permissions can be assigned as numbers or as characters. \\
+\includegraphics[width=0.15\textwidth]{./images/perm2_orig.png} \\
+\begin{tabular}{@{}ll@{}}
+\texttt{chmod 777 file\_name} & Assigns rwx permissions to all three levels for file\_name  \\
+\texttt{chmod 760 file\_name} & Assigns rwx to user, rw- to group and --- (no permissions) to other \\
+\texttt{chmod 644 file\_name} & Assigns rw- to users, r-- to groups and others \\
+\textbf{Note} & Use 777 carefully \\
+\texttt{chgrp group\_name file\_name} & Change the group to group\_name for file\_name \\
+\texttt{chgrp -R group\_name directory} & Change the group recursively to directory and subdirectories 
 \end{tabular}
 
 \section{Searching}
 \begin{tabular}{@{}ll@{}}
-\texttt{} & \\
+\texttt{grep pattern file\_name} & Find the pattern in file\_name \\
+\texttt{grep -r pattern directory} & Find the pattern recursively in directory \\
+\texttt{locate pattern} & Find files and directories by name \\
+\texttt{find ~ -name 'notes*'} & find files in your home directory starting with notes
 \end{tabular}
 
 \section{Archiving Files}
 \begin{tabular}{@{}ll@{}}
-\texttt{} & \\
+\texttt{tar czf archive.tar.gz directory} & Create a gzip tar file named archive.tar.gz \\
+\texttt{tar xzf archive.tar.gz} & Extract a gzip tar file \\
+\textbf{Note} & Remove the z to create/extract a normal tar file. 
 \end{tabular}
 
 \section{Process Management}
 \begin{tabular}{@{}ll@{}}
-\texttt{} & \\
+\texttt{ps -eF} & List all processes on the system \\
+\texttt{ps -ejH} & Print the process tree \\
+\texttt{ps -eLF} & List information about threads \\
+\texttt{ps -eF | grep process\_name} & Prints information on process\_name \\
+\texttt{top} & Display the top processes - q to quit \\
+\texttt{kill -9 PID} & Kills the process with id PID \\
+\texttt{program \&} & Starts the application program in the background \\
+\texttt{bg} & Lists the stopped and background processes \\
+\texttt{fg} & Brings the most recent background process to the foreground
 \end{tabular}
+% pgrep
+% pkill
 
 \section{SSH}
+\subsection{Usage}
 \begin{tabular}{@{}ll@{}}
-\texttt{} & \\
+\texttt{ssh host} & Connect to the host as your local username \\
+\texttt{ssh user@host} & Connect to host as user \\
+\texttt{ssh -p 999 user@host} & Connect to host at port 999 as user 
 \end{tabular}
+\subsection{Key Generation}
+\begin{tabular}{@{}ll@{}}
+\texttt{ssh-keygen ..} & Generate ssh key\\
+\texttt{-t rsa -b 4096 -o} & 4096 bit OpenSSH formatted RSA key\\
+\texttt{-t ed25519} & Alternative to above using EdDSA encryption - OpenSSH 6.5+\\
+\texttt{-a 100} & 100 rounds of key derivations, makes password hard to break \\
+\texttt{-f ~/.ssh/id\_rsa\_\$(date +\%Y-\%m-\%d)} & file name for the key in the .ssh direcotry\\
+\texttt{-C "Key for yeats"} & Comment related to the key \\
+\texttt{Note} & \href{http://world.std.com/~reinhold/diceware.html}{Use a strong passphrase} 
+\end{tabular}
+\subsection{Adding Keys}
+% ssh-add
+% ssh-copy-id
 
+%ssh-keygen -t ed25519 -a 100 -f ~/.ssh/id_ed25519
+%https://security.stackexchange.com/questions/143442/what-are-ssh-keygen-best-practices
+%https://stribika.github.io/2015/01/04/secure-secure-shell.html
+%https://infosec.mozilla.org/guidelines/openssh
+%https://crypto.stackexchange.com/questions/27676/recommended-password-complexity-for-ssh-key-encryption-using-aes-256-cbc
 \section{Transfering Files}
 \begin{tabular}{@{}ll@{}}
 \texttt{} & \\
+\end{tabular}
+
+\section{Getting help}
+\begin{tabular}{@{}ll@{}}
+\texttt{man command\_name} & Displays the manual page for the command\\
+\texttt{Google it} & Search Google or stackexchange
 \end{tabular}
 
 

@@ -9,4 +9,8 @@
 \BOOKMARK [1][-]{section*.9}{Archiving Files}{}% 9
 \BOOKMARK [1][-]{section*.10}{Process Management}{}% 10
 \BOOKMARK [1][-]{section*.11}{SSH}{}% 11
-\BOOKMARK [1][-]{section*.12}{Transfering Files}{}% 12
+\BOOKMARK [2][-]{section*.12}{Usage}{section*.11}% 12
+\BOOKMARK [2][-]{section*.13}{Key Generation}{section*.11}% 13
+\BOOKMARK [2][-]{section*.14}{Adding Keys}{section*.11}% 14
+\BOOKMARK [1][-]{section*.15}{Transfering Files}{}% 15
+\BOOKMARK [1][-]{section*.16}{Getting help}{}% 16

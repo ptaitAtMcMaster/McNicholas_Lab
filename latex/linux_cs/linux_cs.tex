@@ -87,7 +87,7 @@
 \texttt{uname -a}    & Linux system information \\
 \texttt{cat /etc/redhat-release}  & Linux distribution version  \\
 \texttt{hostname} & System host name \\
-\texttt{hostname -I}  & System IP address  \\
+%\texttt{hostname -i}  & System IP address  \\
 \texttt{ifconfig -a}  & Display network interfaces and ip address \\
 \texttt{date}  & Current date and time \\
 \texttt{w}  & Display who is logged into the server  \\
@@ -104,7 +104,7 @@
 \begin{tabular}{@{}ll@{}}
 \texttt{free -h} & Display free and used RAM/Memory \\
 \texttt{df -h} & Display free and used space in file system \\
-\texttt{fdisk -l} & Display the disk partitions size and types \\
+%\texttt{fdisk -l} & Display the disk partitions size and types \\
 \texttt{du -ah} & Display the disk usage for all files and directories
 \end{tabular}
 
@@ -165,7 +165,7 @@ Permissions can be assigned as numbers or as characters. \\
 \begin{tabular}{@{}ll@{}}
 \texttt{grep pattern file\_name} & Find the pattern in file\_name \\
 \texttt{grep -r pattern directory} & Find the pattern recursively in directory \\
-\texttt{locate pattern} & Find files and directories by name \\
+%\texttt{locate pattern} & Find files and directories by name \\
 \texttt{find ~ -name 'notes*'} & find files in your home directory starting with notes
 \end{tabular}
 
@@ -196,7 +196,9 @@ Permissions can be assigned as numbers or as characters. \\
 \begin{tabular}{@{}ll@{}}
 \texttt{ssh host} & Connect to the host as your local username \\
 \texttt{ssh user@host} & Connect to host as user \\
-\texttt{ssh -p 999 user@host} & Connect to host at port 999 as user 
+\texttt{ssh -p 999 user@host} & Connect to host at port 999 as user \\
+\texttt{ssh -Y user@host} & Connect to host with trusted X11 forwarding \\
+\texttt{ssh -i PATH/KEY\_NAME user@host} & Connect with ssh key to host 
 \end{tabular}
 \subsection{Key Generation}
 \begin{tabular}{@{}ll@{}}
@@ -209,15 +211,36 @@ Permissions can be assigned as numbers or as characters. \\
 \texttt{Note} & \href{http://world.std.com/~reinhold/diceware.html}{Use a strong passphrase} 
 \end{tabular}
 \subsection{Adding Keys}
-% ssh-add
-% ssh-copy-id
+\begin{tabular}{@{}ll@{}}
+\texttt{ssh-copy-id -i PATH/KEY\_NAME.pub user@host} & Copies the public key to the host
+\end{tabular}
 
-%ssh-keygen -t ed25519 -a 100 -f ~/.ssh/id_ed25519
 %https://security.stackexchange.com/questions/143442/what-are-ssh-keygen-best-practices
 %https://stribika.github.io/2015/01/04/secure-secure-shell.html
 %https://infosec.mozilla.org/guidelines/openssh
 %https://crypto.stackexchange.com/questions/27676/recommended-password-complexity-for-ssh-key-encryption-using-aes-256-cbc
+
 \section{Transfering Files}
+Copying files from your local machine to remote server \\
+%\begin{tabular}{@{}ll@{}}
+\texttt{rsync -avzhe ssh FILENAME user@host:PATH} \\
+\quad ssh with password authentication \\
+\texttt{rsync -avzhe "ssh -i \$HOME/.ssh/KEY\_NAME" FILENAME user@host:PATH} \\
+\quad ssh with key authentication \\
+%\end{tabular}
+Copying files from the remote server to your local machine \\
+\texttt{rsync -avzhe ssh user@host:PATH/FILENAME LOCAL\_PATH} \\
+\quad ssh with password authentication \\
+\texttt{rsync -avzhe "ssh -i \$HOME/.ssh/KEY\_NAME" user@host:PATH/FILENAME LOCAL\_PATH} \\
+\quad ssh with key authentication \\
+
+Useful \texttt{rsync} options \\
+\begin{tabular}{@{}ll@{}}
+\texttt{--progress} & prints progress bar \\
+\texttt{--dry-run} & tests the rsync commands
+\end{tabular}
+ 
+\section{Access Control}
 \begin{tabular}{@{}ll@{}}
 \texttt{} & \\
 \end{tabular}

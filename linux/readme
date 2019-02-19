@@ -1,4 +1,31 @@
-Passphrase:
+URL: yeats.sharcnet.ca
+
+## Add to .bashrc
+module load nixpkgs/16.09  gcc/7.3.0 julia/1.0.2 r/3.5.2
+# reload .bashrc
+source ~/.bashrc
+
+## Passphrase generation
 http://world.std.com/~reinhold/diceware.html
 6 diceware words = good - 80 bit
 8 diceware words = strong - 100 bit
+
+## SSH
+ssh -Y taitpa@yeats.sharcnet.ca 
+ssh-keygen -t ed25519 -a 100 -f ~/.ssh/id_yeats1_$(date +%Y-%m-%d) -C "yeats key 1 ed25519"
+ssh-copy-id -i ~/.ssh/id_yeats1_2019-02-19.pub taitpa@yeats.sharcnet.ca
+ssh -i ~/.ssh/id_yeats1_2019-02-19 taitpa@yeats.sharcnet.ca
+
+##
+grep "julia" .bashrc
+ grep -r "julia" ~
+ 
+ ## Copying files
+ # file from local to remote
+rsync --progress -avzhe ssh vmls.pdf taitpa@yeats.sharcnet.ca:~/stats/
+rsync --progress -avzhe "ssh -i $HOME/.ssh/id_yeats1_2019-02-19" vmls.pdf taitpa@yeats.sharcnet.ca:~/
+
+ # file from remote to local
+ # v:verbose, a:archive mode, z:compress, h:human readable, e:remote shell
+ rsync --progress -avzhe ssh taitpa@yeats.sharcnet.ca:~/stats/vmls.pdf /home/ptait
+ rsync --dry-run --progress -avzhe "ssh -i $HOME/.ssh/id_yeats1_2019-02-19" vmls.pdf taitpa@yeats.sharcnet.ca:~/

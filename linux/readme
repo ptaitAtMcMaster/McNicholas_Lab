@@ -28,4 +28,4 @@ rsync --progress -avzhe "ssh -i $HOME/.ssh/id_yeats1_2019-02-19" vmls.pdf taitpa
  # file from remote to local
  # v:verbose, a:archive mode, z:compress, h:human readable, e:remote shell
  rsync --progress -avzhe ssh taitpa@yeats.sharcnet.ca:~/stats/vmls.pdf /home/ptait
- rsync --dry-run --progress -avzhe "ssh -i $HOME/.ssh/id_yeats1_2019-02-19" vmls.pdf taitpa@yeats.sharcnet.ca:~/
+ rsync --dry-run --progress -avzhe "ssh -i $HOME/.ssh/id_yeats1_2019-02-19" taitpa@yeats.sharcnet.ca:~/stats/vmls.pdf /home/ptait

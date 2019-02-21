@@ -1,0 +1,23 @@
+Create directory for the packages
+mkdir ~/Rpkg
+
+Create in $HOME
+1) .Rprofile 
+2) .Renviron
+see samples
+
+.Rprofile
+will need to install packages prior to adding them to startup
+* No .Renviron 
+  install.packages("pgmm", lib = "$HOME/Rpkg")
+ * with .Renviron
+   install.packages("pgmm")
+   
+ .Renviron
+ to check, in R do:
+ > .libPaths()
+ [1] "/home/taitpa/Rpkg"                                                                                  
+[2] "/cvmfs/soft.computecanada.ca/easybuild/software/2017/avx512/Compiler/gcc7.3/r/3.5.2/lib64/R/library"
+
+Copy to your machine
+rsync --progress -avzhe "ssh -i $HOME/.ssh/id_yeats1_2019-02-19" taitpa@yeats.sharcnet.ca:~/.Renviron ~

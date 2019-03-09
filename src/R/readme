@@ -21,3 +21,7 @@ will need to install packages prior to adding them to startup
 
 Copy to your machine
 rsync --progress -avzhe "ssh -i $HOME/.ssh/id_yeats1_2019-02-19" taitpa@yeats.sharcnet.ca:~/.Renviron ~
+
+
+clustermq.template 
+  * configures slurm to properly interface with clustermq

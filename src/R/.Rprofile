@@ -1,4 +1,4 @@
-
+# stops asking to save the workspace on exit
 q <- function(save="no", ...) {
   quit(save=save, ...)
 }
@@ -17,13 +17,16 @@ local({
        )
 })
 
-
 .First <- function(){
  cat("\nR session started ", date(), "\n") 
 }
-
 .Last <- function(){ 
  cat("\n R session ended ", date(), "\n")
 }
 
-message("*** Loaded .Rprofile ***")
+options(
+    clustermq.scheduler = "slurm",
+    clustermq.template = "~/clustermq.template"
+)
+
+message("*** .Rprofile Loaded ***")

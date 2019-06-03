@@ -1,3 +1,4 @@
+#!/cvmfs/soft.computecanada.ca/easybuild/software/2017/avx512/Compiler/gcc7.3/r/3.5.2/bin/Rscript
 
 library(clustermq)
 set.seed(3)

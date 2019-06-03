@@ -19,9 +19,5 @@ will need to install packages prior to adding them to startup
  [1] "/home/taitpa/Rpkg"                                                                                  
 [2] "/cvmfs/soft.computecanada.ca/easybuild/software/2017/avx512/Compiler/gcc7.3/r/3.5.2/lib64/R/library"
 
-Copy to your machine
-rsync --progress -avzhe "ssh -i $HOME/.ssh/id_yeats1_2019-02-19" taitpa@yeats.sharcnet.ca:~/.Renviron ~
 
 
-clustermq.template 
-  * configures slurm to properly interface with clustermq

@@ -1,3 +1,5 @@
+## This goes in your home directory
+
 #!/bin/sh
 #SBATCH --job-name={{ job_name }}
 ##SBATCH --partition=default

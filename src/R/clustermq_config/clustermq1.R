@@ -1,4 +1,3 @@
-# https://cran.r-project.org/web/packages/clustermq/vignettes/quickstart.html
 
 library(clustermq)
 set.seed(3)
@@ -12,5 +11,6 @@ f1 <- function(df){
 }
 
 Q(f1, df=list(iris), n_jobs=1, template=list(log_file="./%a.log"))
+
 
 

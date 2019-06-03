@@ -29,3 +29,14 @@ rsync --progress -avzhe "ssh -i $HOME/.ssh/id_yeats1_2019-02-19" vmls.pdf taitpa
  # v:verbose, a:archive mode, z:compress, h:human readable, e:remote shell
  rsync --progress -avzhe ssh taitpa@yeats.sharcnet.ca:~/stats/vmls.pdf /home/ptait
  rsync --dry-run --progress -avzhe "ssh -i $HOME/.ssh/id_yeats1_2019-02-19" taitpa@yeats.sharcnet.ca:~/stats/vmls.pdf /home/ptait
+
+
+## default acl
+setfacl -d -m u:roickt:rwx /home/taitpa/jobs/tr_files
+## recursively apply acl to files and directories
+setfacl -R -m u:roickt:rwx /home/taitpa/jobs/tr_files
+
+getfacl  /home/taitpa/jobs/tr_files
+## removes permissions
+ setfacl -b tr_files
+ 

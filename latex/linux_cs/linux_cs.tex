@@ -173,7 +173,10 @@ Permissions can be assigned as numbers or as characters. \\
 \begin{tabular}{@{}ll@{}}
 \texttt{tar czf archive.tar.gz directory} & Create a gzip tar file named archive.tar.gz \\
 \texttt{tar xzf archive.tar.gz} & Extract a gzip tar file \\
-\textbf{Note} & Remove the z to create/extract a normal tar file. 
+\textbf{Note} & Remove the z to create/extract a normal tar file. \\
+\texttt{zip -r dirName.zip directory} & Create a windows zip file for a directory \\
+\texttt{zip files.zip file1 file2} & Create a windows zip file that contains 2 files \\
+\texttt{unzip files.zip} & Extract a windows zip file 
 \end{tabular}
 
 \section{Process Management}
@@ -215,10 +218,50 @@ Permissions can be assigned as numbers or as characters. \\
 \texttt{ssh-copy-id -i PATH/KEY\_NAME.pub user@host} & Copies the public key to the host
 \end{tabular}
 
-%https://security.stackexchange.com/questions/143442/what-are-ssh-keygen-best-practices
-%https://stribika.github.io/2015/01/04/secure-secure-shell.html
-%https://infosec.mozilla.org/guidelines/openssh
-%https://crypto.stackexchange.com/questions/27676/recommended-password-complexity-for-ssh-key-encryption-using-aes-256-cbc
+
+%\section{Access Control}
+%\begin{tabular}{@{}ll@{}}
+%\texttt{} & \\
+%\end{tabular}
+
+\section{tmux}
+
+\begin{tabular}{@{}ll@{}}
+Sessions \\
+\texttt{tmux new} & Starts a new session \\
+\texttt{tmux new -s mySessionName} & Starts a new named session \\
+\texttt{tmux ls} & List all your tmux sessions \\
+\texttt{tmux a} &  Attach to the last session \\
+\texttt{tmux attach} &  Attach to the last session \\
+\texttt{tmux a -t mySessionName } & Attach to a specific session  \\
+\texttt{tmux kill-session} & kill all sessions \\
+\texttt{tmux kill-session -a -t mySessionName } & kill all sessions but mySessionName \\
+\texttt{tmux kill-session -t mySessionName } &  kill mySessionName session\\
+\\
+\texttt{Ctrl + b \$ } &  Rename sessio \\
+\texttt{Ctrl + b d } & Detach from session \\
+\texttt{Ctrl + b ( or ) } & Move to previous or next session \\
+
+\\ Windows \\
+\texttt{Ctrl + b  c } & Create window \\
+\texttt{Ctrl + b  , } & Rename window \\
+\texttt{Ctrl + b  \& } & Close window \\
+\texttt{Ctrl + b  p or n } & Previous or Next window \\
+
+\\ Panes \\
+\texttt{Ctrl + b  ; } & Last active pane\\
+\texttt{Ctrl + b  \% } & Split vertically \\
+\texttt{Ctrl + b  " } & Split horizantally \\
+\texttt{Ctrl + b arrows }  & Move between panes \\
+\texttt{Ctrl + b q } & show pane numbers \\
+\texttt{Ctrl + b ! } & convert pane to window  \\
+\texttt{Ctrl + b + arrows }  & Resize panes horizantally \\
+\texttt{Ctrl + b Ctrl + arrows }  & Resize panes vertically \\
+\texttt{Ctrl + b spacebar }  & toggle pane layouts \\
+\texttt{Ctrl + b x}  & Close current pane
+
+\end{tabular}
+
 
 \section{Transfering Files}
 Copying files from your local machine to remote server \\
@@ -240,34 +283,12 @@ Useful \texttt{rsync} options \\
 \texttt{--dry-run} & tests the rsync commands
 \end{tabular}
  
-\section{Access Control}
-\begin{tabular}{@{}ll@{}}
-\texttt{} & \\
-\end{tabular}
 
 \section{Getting help}
 \begin{tabular}{@{}ll@{}}
 \texttt{man command\_name} & Displays the manual page for the command\\
 \texttt{Google it} & Search Google or stackexchange
 \end{tabular}
-
-
-%Usage:
-%\verb!\documentclass[!\textit{opt,opt}\verb!]{!\textit{class}\verb!}!.
-
-%---------------------------------------------------------------------------
-
-
-%\section{Sample \LaTeX\ document}
-%\begin{verbatim}
-%\documentclass[11pt]{article}
-% ...
-%\end{verbatim}
-
-%\rule{0.3\linewidth}{0.25pt}
-%\scriptsize
-%Copyright \copyright\ 2014 Winston Chang
-%\href{http://wch.github.io/latexsheet/}{http://wch.github.io/latexsheet/}
 
 
 \end{multicols}

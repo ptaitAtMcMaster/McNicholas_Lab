@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.10.12)  19 FEB 2019 16:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.10.12)  3 JUN 2019 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -429,14 +429,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 86.
 
-<./images/perm1.png, id=72, 741.77126pt x 247.92625pt>
+<./images/perm1.png, id=4, 741.77126pt x 247.92625pt>
 File: ./images/perm1.png Graphic file (type png)
-
-<use ./images/perm1.png>
+ <use ./images/perm1.png>
 Package pdftex.def Info: ./images/perm1.png used on input line 139.
 (pdftex.def)             Requested size: 108.40057pt x 36.23021pt.
 
-<./images/perm2_orig.png, id=74, 546.843pt x 370.183pt>
+<./images/perm2_orig.png, id=6, 546.843pt x 370.183pt>
 File: ./images/perm2_orig.png Graphic file (type png)
 
 <use ./images/perm2_orig.png>
@@ -448,41 +447,186 @@ Overfull \hbox (27.17648pt too wide) in paragraph at lines 155--163
  []
 
 
-Overfull \hbox (34.15045pt too wide) in paragraph at lines 204--213
+Overfull \hbox (34.15045pt too wide) in paragraph at lines 207--216
 []  
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./images/perm1.png> <./images/perm2_orig.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 274.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 274.
+Overfull \vbox (64.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (63.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (62.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (61.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (60.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (59.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (58.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (57.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (56.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (55.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (54.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (53.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (52.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (51.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (50.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (49.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (48.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (47.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (46.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (45.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (44.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (43.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (42.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (41.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (40.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (39.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (38.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (37.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (36.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (35.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (34.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (33.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (32.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (31.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (30.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (29.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (28.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (27.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (26.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (25.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (24.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (23.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (22.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (21.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (20.22173pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (19.22173pt too high) has occurred while \output is active []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 295.
+
+[2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 295.
  (./linux_cs.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 274.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 274.
-Package rerunfilecheck Info: File `linux_cs.out' has not changed.
-(rerunfilecheck)             Checksum: 16997417C22A408DEF594D95263309DA;910.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 274.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 295.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 295.
+
+
+Package rerunfilecheck Warning: File `linux_cs.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `linux_cs.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  FC96FF86AF8ED4F865D2926193B146C8;900.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 295.
  ) 
 Here is how much of TeX's memory you used:
- 6856 strings out of 494985
- 99477 string characters out of 6180355
- 210272 words of memory out of 5000000
- 9970 multiletter control sequences out of 15000+600000
+ 6838 strings out of 494985
+ 99263 string characters out of 6180355
+ 214257 words of memory out of 5000000
+ 9952 multiletter control sequences out of 15000+600000
  6853 words of font info for 25 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 35i,10n,43p,1011b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,10n,43p,1011b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on linux_cs.pdf (2 pages, 156220 bytes).
+Output written on linux_cs.pdf (2 pages, 156843 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
+ 67 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  20 named destinations out of 1000 (max. 500000)
- 147 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

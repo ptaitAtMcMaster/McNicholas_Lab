@@ -2,6 +2,7 @@
 https://docs.computecanada.ca/wiki/SSH
 https://docs.computecanada.ca/wiki/Running_jobs
 
-
+https://docs.computecanada.ca/wiki/Modules
+https://docs.computecanada.ca/wiki/Sharing_data#Access_control_lists_.28ACLs.29
 
 

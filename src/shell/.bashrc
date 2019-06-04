@@ -9,7 +9,7 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-module load nixpkgs/16.09  gcc/7.3.0 julia/1.0.2 r/3.5.2
+module load nixpkgs/16.09  gcc/7.3.0 julia/1.1.0 r/3.5.2
 
 if [ -f ~/.bash_aliases ]; then
       	. ~/.bash_aliases

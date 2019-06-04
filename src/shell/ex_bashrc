@@ -1,4 +1,4 @@
-
+# Write this file into .bashrc on yeats 
 
 
 
@@ -40,5 +40,12 @@ function loadJ() {
         module load julia/1.1.0
 
 }
+
+
+
+
+
+
+
 
 

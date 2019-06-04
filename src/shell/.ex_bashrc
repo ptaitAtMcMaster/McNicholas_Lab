@@ -1,0 +1,44 @@
+
+
+
+
+
+# User specific aliases and functions
+
+# slurm credentials as specified by compute canada 
+export SLURM_ACCOUNT=def-mcnichol-ab
+export SBATCH_ACCOUNT=$SLURM_ACCOUNT
+export SALLOC_ACCOUNT=$SLURM_ACCOUNT
+
+
+
+
+# Example loading functions for R and Julia. 
+# upon logging in, you dont have to use module load <package> 
+# anymore for R and Julia 
+
+
+# R load function
+# to run just type in: loadr
+
+function loadr() {
+
+        module load nixpkgs/16.09  gcc/7.3.0
+
+        module load r/3.5.1
+
+}
+
+
+# Julia Load function 
+# to run just type in: loadJ
+
+function loadJ() {
+
+        module load gcc/7.3.0
+
+        module load julia/1.1.0
+
+}
+
+

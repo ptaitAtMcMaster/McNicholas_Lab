@@ -26,3 +26,4 @@ WORKER_UP to: tcp://yeats-admin:6336
 Error in clustermq:::worker("tcp://yeats-admin:6336") : 
   Timeout reached, terminating
 Execution halted
+slurmstepd: error: *** JOB 561 ON comp2 CANCELLED AT 2019-06-04T12:01:50 ***

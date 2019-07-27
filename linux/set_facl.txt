@@ -1,0 +1,18 @@
+# in ~
+# this is a subdirectory
+mkdir ~/facl_test
+chmod o+X / 775 facl_test
+
+# in ~/facl_test
+setfacl -m u:pocucan:rx tr_files.tar.gz
+
+# check
+getfacl tr_files.tar.gz
+
+# /home
+chmod 701 taitpa
+
+## Nic can copy tr_files.
+
+
+

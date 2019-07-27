@@ -6,6 +6,7 @@ module load nixpkgs/16.09  gcc/7.3.0 julia/1.1.0 r/3.5.2
 
 # Env Variables to get RCall working
 export R_HOME=/cvmfs/soft.computecanada.ca/easybuild/software/2017/avx512/Compiler/gcc7.3/r/3.5.2/lib64/R
+## The  R_LIBS directory is where you installed your R packages
 export R_LIBS=/home/taitpa/Rpkg/
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$R_HOME/lib"
 
